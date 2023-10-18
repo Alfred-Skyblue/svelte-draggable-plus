@@ -1,15 +1,7 @@
 <script lang="ts">
 	import Draggable from '../lib/draggable.svelte'
 	let list = [
-		{
-			name: 'Apples'
-		},
-		{
-			name: 'Oranges'
-		},
-		{
-			name: 'Bananas'
-		}
+		1,2,1,3,4,1
 	]
 	let show = true
 	function onClick() {
@@ -28,7 +20,7 @@
 	<div>
 		{#if show}
 			<Draggable bind:items={list} bind:options>
-				<div slot="item" let:item>{item.name}</div>
+				<div slot="item" let:item>{item}</div>
 			</Draggable>
 		{/if}
 	</div>
