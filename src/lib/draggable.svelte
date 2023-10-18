@@ -1,16 +1,18 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import Sortable, { type SortableEvent } from 'sortablejs'
-	import { insertNodeAt, isUndefined, removeNode } from '$lib/utils/index.js'
+	import { insertNodeAt, isFunction, isUndefined, removeNode, warn } from '$lib/utils/index.js'
 	import type { DraggableEvent, SvelteDraggableOptions } from '$lib/types.js'
+	import { isString } from '../../.svelte-kit/__package__/utils/index.js'
 
 	export let items: unknown[] = []
 	export let options: SvelteDraggableOptions = {}
+	export let rowKey: string | ((item: any, i: number) => any)
 	let element: HTMLElement
 	const CLONE_ELEMENT_KEY = Symbol('cloneElement')
 
 	function defaultClone<T>(value: T): T {
-		if (typeof window.structuredClone === 'function') return window.structuredClone(value)
+		if (isFunction(window.structuredClone)) return window.structuredClone(value)
 		return JSON.parse(JSON.stringify(value))
 	}
 
@@ -60,8 +62,10 @@
 	})
 
 	function generateKey(item: unknown, i: number) {
-		if (typeof item === 'object' && item !== null) return item
-		return `${item}-${i}`
+		if (!rowKey) return item
+		if (isFunction(rowKey)) return rowKey(item, i)
+		if (isString(rowKey)) return item[rowKey]
+		warn('row-key must be a string or function')
 	}
 </script>
 

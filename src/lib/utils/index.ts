@@ -1,3 +1,21 @@
+const MESSAGE_PREFIX = '[vue-draggable-plus]: '
+
+/**
+ * Logs a warning message.
+ * @param {string} msg
+ */
+export function warn(msg: string) {
+	console.warn(MESSAGE_PREFIX + msg)
+}
+
+/**
+ * Logs an error message.
+ * @param {string} msg
+ */
+export function error(msg: string) {
+	console.error(MESSAGE_PREFIX + msg)
+}
+
 /**
  * If the value is undefined, return true, otherwise return false.
  * @param {any} value - any
@@ -24,4 +42,8 @@ export function insertNodeAt(parentElement: Element, element: Element, index: nu
  */
 export function removeNode(node: Node) {
 	if (node.parentNode) node.parentNode.removeChild(node)
+}
+
+export function isFunction(val: any): val is Function {
+	return typeof val === 'function'
 }
