@@ -8,6 +8,12 @@
 npm install svelte-draggable-plus sortablejs
 ```
 
+If your project uses typescript, you can install `@types/sortablejs` to get type support.
+
+```bash
+npm install @types/sortablejs
+```
+
 ## Usage
 
 ```sveltehtml
