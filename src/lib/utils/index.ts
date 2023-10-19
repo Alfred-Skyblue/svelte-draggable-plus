@@ -44,7 +44,7 @@ export function removeNode(node: Node) {
 	if (node.parentNode) node.parentNode.removeChild(node)
 }
 
-export function isFunction(val: any): val is (...args: any[]) => any {
+export function isFunction(val: any): val is Function {
 	return typeof val === 'function'
 }
 

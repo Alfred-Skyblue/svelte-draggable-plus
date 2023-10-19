@@ -17,7 +17,8 @@
 		clone?: <T = any>(value: T) => T
 	} = {}
 
-	export let key: string | ((item: any, i: number) => any) = undefined
+	export let key: string | ((item: any, i: number) => any) | undefined = undefined
+
 	let element: HTMLElement
 
 	function defaultClone<T>(value: T): T {
@@ -27,14 +28,15 @@
 
 	const { clone = defaultClone } = options
 
-	function callOptionsEvent(name: string, event: SortableEvent) {
-		if (isFunction(options[name])) {
-			return options[name](event)
+	function callOptionsEvent(this: any, name: keyof typeof options, args: any[]) {
+		const cb = options[name]
+		if (isFunction(cb)) {
+			return (cb as Function).apply(this, args)
 		}
 	}
 
-	function onUpdate(event) {
-		callOptionsEvent('onUpdate', event)
+	function onUpdate(event: SortableEvent) {
+		callOptionsEvent('onUpdate', [...arguments])
 		const _items = [...items]
 		const { oldIndex, newIndex } = event
 		const movedElement = _items.splice(oldIndex!, 1)[0]
@@ -42,13 +44,13 @@
 		items = _items
 	}
 	function onStart(evt: SortableEvent) {
-		callOptionsEvent('onStart', evt)
+		callOptionsEvent('onStart', [...arguments])
 		const _el: any = evt.item
 		_el[CLONE_ELEMENT_KEY] = clone(items?.[evt.oldIndex!])
 	}
 
 	function onAdd(evt: SortableEvent) {
-		callOptionsEvent('onAdd', evt)
+		callOptionsEvent('onAdd', [...arguments])
 		const _el: any = evt.item
 		const element = _el[CLONE_ELEMENT_KEY]
 		if (isUndefined(element)) return
@@ -59,7 +61,7 @@
 	}
 
 	function onRemove(evt: SortableEvent) {
-		callOptionsEvent('onRemove', evt)
+		callOptionsEvent('onRemove', [...arguments])
 		const { from, item, oldIndex, oldDraggableIndex, pullMode, clone } = evt
 		if (pullMode === 'clone') {
 			insertNodeAt(from, item, oldIndex!)
