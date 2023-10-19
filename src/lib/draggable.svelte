@@ -7,9 +7,9 @@
 		isUndefined,
 		removeNode,
 		warn,
-		isString
+		isString,
+		CLONE_ELEMENT_KEY
 	} from './utils/index.js'
-	import { CLONE_ELEMENT_KEY } from './utils/enum.js'
 
 	export let items: any[] = []
 
