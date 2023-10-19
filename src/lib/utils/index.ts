@@ -1,6 +1,11 @@
 const MESSAGE_PREFIX = '[vue-draggable-plus]: '
 
 /**
+ * @description The key of the cloned element
+ */
+export const CLONE_ELEMENT_KEY = Symbol('CLONE_ELEMENT_KEY')
+
+/**
  * Logs a warning message.
  * @param {string} msg
  */
