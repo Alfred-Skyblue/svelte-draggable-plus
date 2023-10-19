@@ -36,14 +36,6 @@
 			id: '4-2'
 		}
 	]
-	let show = true
-	function onClick() {
-		show = !show
-	}
-
-	function onUpdate() {
-		console.log(arguments)
-	}
 
 	function clone(element: Record<'name' | 'id', string>) {
 		const len = list2.length
@@ -53,12 +45,12 @@
 		}
 	}
 
-	let options1 = {
+	const options1 = {
 		group: { name: 'people', pull: 'clone', put: false },
 		sort: false,
 		clone
 	}
-	let options2 = {
+	const options2 = {
 		group: 'people'
 	}
 </script>
@@ -66,12 +58,12 @@
 <div>
 	<div class="bg-red">
 		<Draggable bind:items={list} options={options1}>
-			<div slot="item" let:item>{item.name}</div>
+			<div slot="item" let:element>{element.name}</div>
 		</Draggable>
 	</div>
 	<div class="mt-20 bg-blue">
-		<Draggable bind:items={list2} bind:options={options2}>
-			<div slot="item" let:item>{item.name}</div>
+		<Draggable bind:items={list2} options={options2}>
+			<div slot="element" let:item>{item.name}</div>
 		</Draggable>
 	</div>
 </div>

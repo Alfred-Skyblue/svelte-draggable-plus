@@ -11,11 +11,13 @@
 	} from './utils/index.js'
 	import { CLONE_ELEMENT_KEY } from './utils/enum.js'
 
-	export let items: unknown[] = []
+	export let items: any[] = []
+
 	export let options: Options & {
-		clone?: <T>(value: T) => T
+		clone?: <T = any>(value: T) => T
 	} = {}
-	export let key: string | ((item: any, i: number) => any) = ''
+
+	export let key: string | ((item: any, i: number) => any) = undefined
 	let element: HTMLElement
 
 	function defaultClone<T>(value: T): T {
@@ -84,6 +86,6 @@
 
 <div bind:this={element} class="drraggable-container">
 	{#each items as item, i (generateKey(item, i))}
-		<slot name="item" {item} />
+		<slot name="element" {item} />
 	{/each}
 </div>
