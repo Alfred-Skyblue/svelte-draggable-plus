@@ -2,7 +2,7 @@ import { defineConfig, HeadConfig } from 'vitepress'
 import { applyPlugins } from './plugins/code'
 
 const guides = [
-	{ text: '指引', link: '/guide/index' },
+	{ text: '指引', link: '/guide/' },
 	{ text: '安装', link: '/guide/install' }
 ]
 
