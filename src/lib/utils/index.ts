@@ -1,6 +1,11 @@
 const MESSAGE_PREFIX = '[vue-draggable-plus]: '
 
 /**
+ * @description The key of the cloned element
+ */
+export const CLONE_ELEMENT_KEY = Symbol('CLONE_ELEMENT_KEY')
+
+/**
  * Logs a warning message.
  * @param {string} msg
  */
@@ -44,7 +49,7 @@ export function removeNode(node: Node) {
 	if (node.parentNode) node.parentNode.removeChild(node)
 }
 
-export function isFunction(val: any): val is (...args: any[]) => any {
+export function isFunction(val: any): val is Function {
 	return typeof val === 'function'
 }
 

@@ -2,7 +2,7 @@
 
 `svelte-draggable-plus` is a draggable sorting component for the `Svelte` framework, based on `Sortablejs`. If you want to learn more about `Sortablejs`, you can check the [Sortablejs official website](https://github.com/SortableJS/Sortable).
 
-## Installation
+## Install
 
 ```bash
 npm install svelte-draggable-plus sortablejs
