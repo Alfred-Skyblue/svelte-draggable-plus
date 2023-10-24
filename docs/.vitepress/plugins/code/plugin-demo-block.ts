@@ -1,3 +1,4 @@
+// 代码来自：https://github.com/ikun-svelte/ikun-ui/blob/main/docs/.vitepress/plugins/code/plugin-demo-block.ts
 import { baseParse } from '@vue/compiler-core'
 import type { ElementNode } from '@vue/compiler-core'
 import type { MarkdownRenderer } from 'vitepress'
