@@ -11,6 +11,10 @@
 		CLONE_ELEMENT_KEY
 	} from './utils/index.js'
 
+	let className: string = ''
+
+	export { className as class }
+
 	export let items: any[] = []
 
 	export let options: Options & {
@@ -20,7 +24,7 @@
 	export let key: string | ((item: any, i: number) => any) | undefined = undefined
 
 	let element: HTMLElement
-
+	$: _className = `draggable-container ${className}`
 	function defaultClone<T>(value: T): T {
 		if (isFunction(window.structuredClone)) return window.structuredClone(value)
 		return JSON.parse(JSON.stringify(value))
@@ -92,11 +96,11 @@
 		if (!key) return item
 		if (isFunction(key)) return key(item, i)
 		if (isString(key)) return item[key]
-		warn('row-key must be a string or function')
+		warn('key must be a string or function')
 	}
 </script>
 
-<div bind:this={element} class="draggable-container">
+<div bind:this={element} class={className}>
 	{#each items as item, i (generateKey(item, i))}
 		<slot name="element" {item} />
 	{/each}
