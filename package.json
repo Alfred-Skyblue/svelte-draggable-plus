@@ -2,6 +2,7 @@
 	"name": "svelte-draggable-plus",
 	"version": "0.1.0",
 	"scripts": {
+		"docs:dev": "cd docs && npm run docs:dev",
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
