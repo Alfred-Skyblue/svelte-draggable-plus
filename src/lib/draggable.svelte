@@ -96,7 +96,7 @@
 	}
 </script>
 
-<div bind:this={element} class="drraggable-container">
+<div bind:this={element} class="draggable-container">
 	{#each items as item, i (generateKey(item, i))}
 		<slot name="element" {item} />
 	{/each}
