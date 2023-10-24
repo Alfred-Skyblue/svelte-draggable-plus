@@ -16,7 +16,7 @@ npm install @types/sortablejs -D
 
 ## Usage
 
-```sveltehtml
+```html
 <script>
 	import { Draggable } from 'svelte-draggable-plus'
 	let list = [
@@ -37,9 +37,16 @@ npm install @types/sortablejs -D
 			id: '4'
 		}
 	]
+	let options = {
+		group: 'shared',
+		animation: 150,
+		onEnd: (event) => {
+			console.log(event)
+		}
+	}
 </script>
 
-<Draggable bind:items={list} key="id">
+<Draggable bind:items="{list}" key="id" bind:options="{options}">
 	<div slot="element" let:item>{item.name}</div>
 </Draggable>
 ```
