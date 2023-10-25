@@ -20,7 +20,7 @@
 	]
 </script>
 
-<div>
+<div class="flex">
 	<Draggable
 		class="flex flex-col gap-2 p-4 w-300px h-300px m-auto bg-gray-500/5 rounded"
 		bind:items={list}
@@ -31,4 +31,8 @@
 			{item.name}
 		</div>
 	</Draggable>
+
+	<pre>
+		{JSON.stringify(list, null, 2)}
+	</pre>
 </div>

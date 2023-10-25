@@ -11,8 +11,8 @@ hero:
 
   actions:
     - theme: brand
-      text: Get Start
-      link: /guide/quick-start
+      text: Guide
+      link: /guide/
     - theme: alt
       text: API
       link: /api
