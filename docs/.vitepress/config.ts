@@ -1,10 +1,7 @@
 import { defineConfig, HeadConfig } from 'vitepress'
 import { applyPlugins } from './plugins/code'
 
-const guides = [
-	{ text: '指引', link: '/guide/' },
-	{ text: '安装', link: '/guide/install' }
-]
+const guides = [{ text: 'Guide', link: '/guide/' }]
 
 const sidebar = {
 	'/guide': [
@@ -47,7 +44,7 @@ const head = [
 ] as HeadConfig[]
 const nav = [
 	{ text: 'Home', link: '/' },
-	{ text: 'Guide', items: guides }
+	{ text: 'Guide', link: '/guide/' }
 ]
 export default defineConfig({
 	title: 'svelte-draggable-plus',

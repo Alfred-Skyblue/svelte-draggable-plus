@@ -1,26 +1,23 @@
 # svelte-draggable-plus
 
-为什么要取名叫 `svelte-draggable-plus` 呢？因为为了跟 `vue-draggable-plus` 保持同步（实际上是因为 `svelte-draggable` 这个名字被占用了，并且它已经不再维护）
+Why is it named `svelte-draggable-plus`? Well, it's named that way to align with `vue-draggable-plus`.
 
-## 说明
+## Introduction
 
-`svelte-draggable-plus` 是一个基于 [`Sortablejs`](https://github.com/SortableJS/Sortable) 的可拖拽排序插件，为了便于在 svelte 框架中使用，我为它封装了一个组件，我们可以使用它来完成拖拽排序。
+`svelte-draggable-plus` is a draggable sorting plugin based on [`Sortablejs`](https://github.com/SortableJS/Sortable), wrapped as a component for easy use within the Svelte framework. You can use it to implement drag-and-drop sorting.
 
-
-## 安装
-
+## Installation
 
 ```bash
 npm install svelte-draggable-plus sortablejs
 ```
 
-If your project uses typescript, you can install `@types/sortablejs` to get type support.
+If your project uses TypeScript, you can also install `@types/sortablejs` to benefit from type support.
 
 ```bash
 npm install @types/sortablejs -D
 ```
 
-
-## 使用方式
+## Usage
 
 <demo src="basic/index.svelte"></demo>

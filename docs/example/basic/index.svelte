@@ -25,6 +25,7 @@
 		class="flex flex-col gap-2 p-4 w-300px h-300px m-auto bg-gray-500/5 rounded"
 		bind:items={list}
 		options={{ animation: 150 }}
+		key="id"
 	>
 		<div class="cursor-move h-30 bg-gray-500/5 rounded p-3 cursor-move" slot="element" let:item>
 			{item.name}
