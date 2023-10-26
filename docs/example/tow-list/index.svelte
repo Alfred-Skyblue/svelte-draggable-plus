@@ -18,8 +18,20 @@
 			id: '4'
 		}
 	]
+	let list2 = list.map((item) => ({
+		name: `${item.name}-2`,
+		id: `${item.id}-2`
+	}))
 	const options = {
-		animation: 150
+		animation: 150,
+		ghostClass: 'ghost',
+		group: 'shared'
+	}
+
+	const options2 = {
+		animation: 150,
+		ghostClass: 'ghost',
+		group: 'shared'
 	}
 </script>
 
@@ -29,8 +41,18 @@
 			{item.name}
 		</div>
 	</Draggable>
+	<Draggable bind:items={list2} key="id" options={options2}>
+		<div slot="element" let:item>
+			{item.name}
+		</div>
+	</Draggable>
+</div>
 
+<div class="flex">
 	<pre>
 		{JSON.stringify(list, null, 2)}
+	</pre>
+	<pre>
+		{JSON.stringify(list2, null, 2)}
 	</pre>
 </div>

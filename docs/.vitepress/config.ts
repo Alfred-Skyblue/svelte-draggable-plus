@@ -3,14 +3,11 @@ import { applyPlugins } from './plugins/code'
 
 const guides = [{ text: 'Guide', link: '/guide/' }]
 
-const sidebar = {
-	'/guide': [
-		{
-			text: 'Developer Guide',
-			items: guides
-		}
-	]
-}
+const sidebar = [
+	{ text: 'Guide', link: '/guide/' },
+	{ text: 'Demo', link: '/demo/' },
+	{ text: 'API', link: '/api/' }
+]
 
 const head = [
 	['meta', { property: 'og:title', content: 'svelte-draggable-plus' }],

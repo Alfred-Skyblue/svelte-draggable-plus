@@ -94,3 +94,11 @@ html ::-webkit-scrollbar-thumb {
 	background: rgba(255, 62, 0, 0.38);
 	border-radius: 20px;
 }
+
+.draggable-container {
+	@apply flex flex-col gap-2 p-4 w-300px h-300px m-auto bg-gray-500/5 rounded overflow-y-auto;
+}
+
+.draggable-container > div {
+	@apply cursor-move h-30 bg-gray-500/5 rounded p-3;
+}
