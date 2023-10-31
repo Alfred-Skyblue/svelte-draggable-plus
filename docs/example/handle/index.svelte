@@ -1,5 +1,6 @@
 <script>
 	import { Draggable } from 'svelte-draggable-plus'
+	import IconSort from '../icons/IconSort.svelte'
 	let list = [
 		{
 			name: 'Joao',
@@ -18,39 +19,23 @@
 			id: '4'
 		}
 	]
-	let list2 = list.map((item) => ({
-		name: `${item.name}-2`,
-		id: `${item.id}-2`
-	}))
 	const options = {
 		animation: 150,
-		group: 'people'
-	}
-
-	const options2 = {
-		animation: 150,
-		group: 'people'
+		handle: '.handle'
 	}
 </script>
 
 <div class="flex">
 	<Draggable bind:items={list} key="id" {options}>
-		<div slot="element" let:item>
-			{item.name}
+		<div slot="element" let:item class="flex gap-20 items-center">
+			<div class="handle">
+				<IconSort />
+			</div>
+			<div>{item.name}</div>
 		</div>
 	</Draggable>
-	<Draggable bind:items={list2} key="id" options={options2}>
-		<div slot="element" let:item>
-			{item.name}
-		</div>
-	</Draggable>
-</div>
 
-<div class="flex">
 	<pre>
 		{JSON.stringify(list, null, 2)}
-	</pre>
-	<pre>
-		{JSON.stringify(list2, null, 2)}
 	</pre>
 </div>

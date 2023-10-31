@@ -9,3 +9,18 @@
 
 
 <demo src="tow-list/index.svelte"></demo>
+
+
+## 克隆
+
+<demo src="clone/index.svelte"></demo>
+
+
+## 自定义克隆
+
+<demo src="custom-clone/index.svelte"></demo>
+
+
+## handle
+
+<demo src="handle/index.svelte"></demo>

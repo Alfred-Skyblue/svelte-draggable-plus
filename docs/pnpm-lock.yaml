@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -20,9 +20,6 @@ devDependencies:
   '@vue/compiler-core':
     specifier: ^3.3.4
     version: 3.3.4
-  baiwusanyu-utils:
-    specifier: ^1.0.14
-    version: 1.0.14(ansi-colors@4.1.3)(hash-sum@2.0.0)(moment@2.29.4)
   fs-extra:
     specifier: ^11.1.1
     version: 11.1.1
@@ -228,50 +225,6 @@ packages:
       '@babel/helper-string-parser': 7.22.5
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
-    dev: true
-
-  /@baiwusanyu/utils-com@1.0.16(ansi-colors@4.1.3)(hash-sum@2.0.0):
-    resolution: {integrity: sha512-2FIcfCRSBxFJqDU8KVFdEMdzF7IiLQG7CCLEBHYVles7g8C6ztc3QPisfSrd06oQ0TmxP7B+/9yn7OAvOHjSYw==}
-    peerDependencies:
-      ansi-colors: ^4.1.3
-      hash-sum: ^2.0.0
-    dependencies:
-      ansi-colors: 4.1.3
-      hash-sum: 2.0.0
-    dev: true
-
-  /@baiwusanyu/utils-date@1.0.16(ansi-colors@4.1.3)(moment@2.29.4):
-    resolution: {integrity: sha512-YdKgSXQ8NIIG54k8pKCQN378zXfdsPhvPCu6qor55Q5R73vdkwkxYF5WbLTsnF0JNdeoxpqK41yhxvrTxt0TyA==}
-    peerDependencies:
-      ansi-colors: ^4.1.3
-      moment: ^2.29.4
-    dependencies:
-      ansi-colors: 4.1.3
-      moment: 2.29.4
-    dev: true
-
-  /@baiwusanyu/utils-is@1.0.16:
-    resolution: {integrity: sha512-q5Tinm2zicuxIfmiGtphYATH7bHDzhqSfix+T4IzbDNubp4v5ZuzSVTlk8yFiCgTVVelOkaHs6129LtF3eqVPg==}
-    dev: true
-
-  /@baiwusanyu/utils-log@1.0.16(ansi-colors@4.1.3):
-    resolution: {integrity: sha512-5OjN6Wny72MVZcivqbJi1+PCHP95jeAQZZ/KopDsRkL1Z9QSy1imMVSxr9d/rZ0X2URZLx1gDLWg1BJ+IfDLYA==}
-    peerDependencies:
-      ansi-colors: ^4.1.3
-    dependencies:
-      ansi-colors: 4.1.3
-    dev: true
-
-  /@baiwusanyu/utils-normalize@1.0.16:
-    resolution: {integrity: sha512-eKCg55/t9TWdBOIfviTrRSDJ1oF+RFL+KbxZ7eflU8Wmf1sseGIBzw6wr6O0apBo2uxEYT1tsCVvq5bYQjFO6A==}
-    dev: true
-
-  /@baiwusanyu/utils-obj@1.0.16:
-    resolution: {integrity: sha512-btRWNw09WkYARxHyKG3+UOf7eIHCvUXI8AtiU2a5KagNy3PB3GX+5+wK7BV4asONAE3bvOxwfgNbms5qAY18Og==}
-    dev: true
-
-  /@baiwusanyu/utils-task@1.0.16:
-    resolution: {integrity: sha512-HMN2xkwll3Z7KEjjMOEH3S7cEZmhraP0HSq7cTSkgGcziuTfkHd/GjpBMuWx8wxx9F0TATfRnrLlSAe5D1SkTA==}
     dev: true
 
   /@docsearch/css@3.5.2:
@@ -1047,11 +1000,6 @@ packages:
       '@algolia/transporter': 4.20.0
     dev: true
 
-  /ansi-colors@4.1.3:
-    resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
-    engines: {node: '>=6'}
-    dev: true
-
   /ansi-sequence-parser@1.1.1:
     resolution: {integrity: sha512-vJXt3yiaUL4UU546s3rPXlsry/RnM730G1+HkpKE012AN0sx1eOrxSu95oKDIonskeLTijMgqWZ3uDEe3NFvyg==}
     dev: true
@@ -1074,22 +1022,6 @@ packages:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
     dependencies:
       dequal: 2.0.3
-    dev: true
-
-  /baiwusanyu-utils@1.0.14(ansi-colors@4.1.3)(hash-sum@2.0.0)(moment@2.29.4):
-    resolution: {integrity: sha512-vV+2cR1rSrrJ8awy0FoNPKgiKVyJZLQ2Za8xrOreHkZ5zTlSSs4/5dVkcCfVonTzfyVmCxeXesVHdgBoukJl+g==}
-    dependencies:
-      '@baiwusanyu/utils-com': 1.0.16(ansi-colors@4.1.3)(hash-sum@2.0.0)
-      '@baiwusanyu/utils-date': 1.0.16(ansi-colors@4.1.3)(moment@2.29.4)
-      '@baiwusanyu/utils-is': 1.0.16
-      '@baiwusanyu/utils-log': 1.0.16(ansi-colors@4.1.3)
-      '@baiwusanyu/utils-normalize': 1.0.16
-      '@baiwusanyu/utils-obj': 1.0.16
-      '@baiwusanyu/utils-task': 1.0.16
-    transitivePeerDependencies:
-      - ansi-colors
-      - hash-sum
-      - moment
     dev: true
 
   /binary-extensions@2.2.0:
@@ -1335,10 +1267,6 @@ packages:
       duplexer: 0.1.2
     dev: true
 
-  /hash-sum@2.0.0:
-    resolution: {integrity: sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==}
-    dev: true
-
   /highlight.js@11.8.0:
     resolution: {integrity: sha512-MedQhoqVdr0U6SSnWPzfiadUcDHfN/Wzq25AkXiQv9oiOO/sG0S7XkvpFIqWBl9Yq1UYyYOOVORs5UW2XlPyzg==}
     engines: {node: '>=12.0.0'}
@@ -1478,10 +1406,6 @@ packages:
       pathe: 1.1.1
       pkg-types: 1.0.3
       ufo: 1.3.1
-    dev: true
-
-  /moment@2.29.4:
-    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: true
 
   /mrmime@1.0.1:
