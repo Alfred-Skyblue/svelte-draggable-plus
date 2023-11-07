@@ -28,6 +28,7 @@ jobs:
       - name: Install and Build
         run: |
           pnpm install
+          cd docs && pnpm install
           pnpm docs:build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
