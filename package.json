@@ -23,8 +23,10 @@
 	],
 	"license": "MIT",
 	"scripts": {
+		"docs:dev": "cd docs && npm run docs:dev",
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
+		"docs:build": "cd docs && npm run docs:build",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"prepublishOnly": "npm run package",

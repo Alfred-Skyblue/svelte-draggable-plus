@@ -100,7 +100,7 @@
 	}
 </script>
 
-<div bind:this={element} class={className}>
+<div bind:this={element} class={_className}>
 	{#each items as item, i (generateKey(item, i))}
 		<slot name="element" {item} />
 	{/each}
