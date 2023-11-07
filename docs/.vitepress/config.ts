@@ -44,6 +44,7 @@ const nav = [
 	{ text: 'Guide', link: '/guide/' }
 ]
 export default defineConfig({
+	base: '/svelte-draggable-plus/',
 	title: 'svelte-draggable-plus',
 	description: 'Documentation site for svelte-draggable-plus',
 	head,
