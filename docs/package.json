@@ -5,7 +5,7 @@
 	"scripts": {
 		"init": "npx vitepress init",
 		"docs:dev": "vitepress dev",
-		"docs:build": "cd ../ && pnpm run build && cd docs && vitepress build",
+		"docs:build": "vitepress build",
 		"docs:preview": "vitepress preview"
 	},
 	"devDependencies": {
