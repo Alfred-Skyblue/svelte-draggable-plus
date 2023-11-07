@@ -41,7 +41,9 @@ const head = [
 ] as HeadConfig[]
 const nav = [
 	{ text: 'Home', link: '/' },
-	{ text: 'Guide', link: '/guide/' }
+	{ text: 'Guide', link: '/guide/' },
+	{ text: 'Demo', link: '/demo/' },
+	{ text: 'API', link: '/api/' }
 ]
 export default defineConfig({
 	base: '/svelte-draggable-plus/',

@@ -1,22 +1,22 @@
-# 演示
+# demo
 
-## 基础使用
+## Basic Usage
 
 <demo src="basic/index.svelte"></demo>
 
 
-## 双向列表拖动
+## Two-way list drag
 
 
 <demo src="tow-list/index.svelte"></demo>
 
 
-## 克隆
+## clone
 
 <demo src="clone/index.svelte"></demo>
 
 
-## 自定义克隆
+## Custom clone
 
 <demo src="custom-clone/index.svelte"></demo>
 
