@@ -18,7 +18,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 6.x
+          version: 8.x
       - name: Set node version to LTS
         uses: actions/setup-node@v3
         with:
