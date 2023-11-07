@@ -23,7 +23,7 @@ const head = [
 		{ property: 'og:url', content: 'https://github.com/Alfred-Skyblue/svelte-draggable-plus' }
 	],
 	['meta', { name: 'referrer', content: 'no-referrer' }],
-	['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+	['link', { rel: 'icon', href: '/svelte-draggable-plus/logo.svg', type: 'image/svg+xml' }],
 	[
 		'link',
 		{
