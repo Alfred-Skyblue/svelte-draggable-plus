@@ -102,3 +102,8 @@ html ::-webkit-scrollbar-thumb {
 .draggable-container > div {
 	@apply cursor-move h-30 bg-gray-500/5 rounded p-3;
 }
+
+#home_logo > svg {
+	height: 100%;
+	width: 100%;
+}

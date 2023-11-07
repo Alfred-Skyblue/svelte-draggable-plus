@@ -53,7 +53,7 @@ export default defineConfig({
 	themeConfig: {
 		logo: '/logo.svg',
 		socialLinks: [
-			{ icon: 'github', link: 'https://github.com/Alfred-Skyblue/svelte-draggable-plus' }
+			{ icon: 'github', link: 'https://github.com/alfred-skyblue/svelte-draggable-plus' }
 		],
 		footer: {
 			message: 'MIT Licensed',
